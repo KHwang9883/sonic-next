@@ -1,0 +1,39 @@
+# 站点元数据
+title: 我的导航站
+subtitle: 精选软件与资源
+favicon: /favicon.svg
+
+# 侧边栏菜单结构
+# 每个菜单项通过 config 字段引用 data/ 目录下的同名 YAML 文件（不含 .yml 后缀）
+# 顶层菜单项可直接配置 config，也可通过 submenu 定义二级分组
+menu:
+  - name: 示例分类
+    icon: fas fa-star
+    config: demo
+  - name: 分组示例
+    icon: fas fa-layer-group
+    submenu:
+      - name: 子分类示例
+        icon: fas fa-cube
+        config: demoSub
+
+about:
+  url: /about/
+  icon: far fa-heart
+  name: 关于本站
+
+# 关于页面配置
+# website.md 指向 data/ 目录下的 Markdown 文件，渲染为「关于本站」区块
+# webmaster 为「本站站长」区块，不需要时整段删除即可
+aboutPage:
+  website:
+    head: 关于本站
+    md: about.md
+  webmaster:
+    head: 本站站长
+    name: 站长昵称
+    url: https://example.com/
+    img: missing.png
+    description: 一句话简介
+
+since: 2024

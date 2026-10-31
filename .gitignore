@@ -1,0 +1,32 @@
+# Astro dev/build outputs
+.astro
+dist
+
+# Legacy Nuxt outputs (kept for safety during migration)
+.nuxt
+.output
+.data
+.nitro
+.cache
+
+# Node dependencies
+node_modules
+bun.lockb
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+.vscode
+.trae
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Hexo legacy (keep data and images)

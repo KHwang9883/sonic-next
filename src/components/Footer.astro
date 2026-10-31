@@ -1,0 +1,21 @@
+---
+interface Props {
+  since: number
+  title: string
+}
+
+const { since, title } = Astro.props
+const currentYear = new Date().getFullYear()
+const sinceRange = since === currentYear ? String(since) : `${since} - ${currentYear}`
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-copyright">&copy; {sinceRange}</span>
+      <a href="/" class="footer-author">{title}</a>
+      <span class="footer-divider">|</span>
+      <span class="footer-credit">Powered by <a href="https://astro.build/" target="_blank">Astro</a></span>
+    </div>
+  </div>
+</footer>
