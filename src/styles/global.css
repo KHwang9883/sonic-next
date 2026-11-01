@@ -675,6 +675,31 @@
   font-size: 0.8rem;
 }
 
+/* PUP 条目的 winget 按钮：橙色提示可能包含推广/捆绑组件 */
+.nav-card-winget.pup {
+  color: #fb923c;
+  background: rgba(251, 146, 60, 0.12);
+  border-color: rgba(251, 146, 60, 0.35);
+}
+
+.nav-card-winget.pup:hover {
+  color: #fb923c;
+  background: rgba(251, 146, 60, 0.22);
+  border-color: #fdba74;
+}
+
+.dark .nav-card-winget.pup {
+  color: #fdba74;
+  background: rgba(253, 186, 116, 0.1);
+  border-color: rgba(253, 186, 116, 0.3);
+}
+
+.dark .nav-card-winget.pup:hover {
+  color: #fdba74;
+  background: rgba(253, 186, 116, 0.2);
+  border-color: #fdba74;
+}
+
 /* BackToTop */
 .back-to-top {
   position: fixed;
@@ -1079,6 +1104,26 @@
   margin: 0;
 }
 
+/* Toast 中的 PUP 提示 */
+.nav-card-toast-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(251, 146, 60, 0.12);
+  border: 1px solid rgba(251, 146, 60, 0.35);
+  color: #ea580c;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.nav-card-toast-warning i {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 .dark .nav-card-toast-overlay {
   background: rgba(0, 0, 0, 0.7);
 }
@@ -1103,6 +1148,12 @@
 
 .dark .nav-card-toast-hint {
   color: #9ca3af;
+}
+
+.dark .nav-card-toast-warning {
+  background: rgba(253, 186, 116, 0.1);
+  border-color: rgba(253, 186, 116, 0.3);
+  color: #fed7aa;
 }
 
 /* Footer styles */

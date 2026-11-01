@@ -34,10 +34,10 @@ const hasTags = item.foss || item.paid || item.affiliate || item.require_proxy |
         {item.affiliate && <i class="fas fa-user nav-card-tag affiliate" title="本人参与"></i>}
         {item.require_proxy === 'required' && <i class="fas fa-plane nav-card-tag proxy-required" title="国内需借助特殊手段"></i>}
         {item.require_proxy === 'optional' && <i class="fas fa-plane nav-card-tag proxy-optional" title="国内可能需特殊手段"></i>}
-        {item.pup && <i class="fas fa-bullhorn nav-card-tag pup" title="可能包含推广或不必要的附加组件"></i>}
+        {item.pup && <i class="fas fa-bullhorn nav-card-tag pup" title="该软件可能包含用户不想要的功能，包括但不限于弹窗广告、推广其他软件、静默修改默认程序等。请在安装或使用时多加留意，并作一些妥当的配置调优。"></i>}
         {item.winget && (
           <button
-            class="nav-card-winget"
+            class={`nav-card-winget${item.pup ? ' pup' : ''}`}
             data-winget={item.winget}
             title="使用 winget 安装"
           >

@@ -132,6 +132,10 @@ function initLinkCard() {
         <span>安装命令已复制到剪贴板</span>
       </div>
       <div class="nav-card-toast-command"></div>
+      <div class="nav-card-toast-warning" style="display: none">
+        <i class="fas fa-bullhorn"></i>
+        <span>该软件可能包含用户不想要的功能，包括但不限于弹窗广告、推广其他软件、静默修改默认程序等。请在安装或使用时多加留意，并作一些妥当的配置调优。</span>
+      </div>
       <p class="nav-card-toast-hint">请在 Windows 终端中粘贴执行</p>
     </div>
   `
@@ -140,9 +144,11 @@ function initLinkCard() {
   const toastCommand = toastOverlay.querySelector('.nav-card-toast-command') as HTMLElement
   const toastClose = toastOverlay.querySelector('.nav-card-toast-close') as HTMLElement
   const toastCard = toastOverlay.querySelector('.nav-card-toast') as HTMLElement
+  const toastWarning = toastOverlay.querySelector('.nav-card-toast-warning') as HTMLElement
 
-  function showToast(command: string) {
+  function showToast(command: string, isPup: boolean) {
     if (toastCommand) toastCommand.textContent = command
+    if (toastWarning) toastWarning.style.display = isPup ? '' : 'none'
     toastOverlay.style.display = ''
   }
 
@@ -184,10 +190,11 @@ function initLinkCard() {
       const wingetId = (btn as HTMLElement).getAttribute('data-winget')
       if (!wingetId) return
       const command = `winget install --id "${wingetId}"`
+      const isPup = (btn as HTMLElement).classList.contains('pup')
       const writePromise = navigator.clipboard
         ? navigator.clipboard.writeText(command)
         : Promise.reject(new Error('no clipboard'))
-      writePromise.then(() => showToast(command)).catch(() => showToast(command))
+      writePromise.then(() => showToast(command, isPup)).catch(() => showToast(command, isPup))
     })
   })
 }
