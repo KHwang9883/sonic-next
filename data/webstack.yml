@@ -69,7 +69,7 @@ menu:
       - name: 防病毒
         icon: fas fa-virus-slash
         config: antivirus
-        description: 虽然 Windows 系统自带安全中心，理论上无需安装第三方防病毒软件，但是对于初上手的电脑用户，最好还是安装一款靠谱的第三方安全软件，并作一些妥当的配置。
+        description: 虽然 Windows 系统自带安全中心，理论上无需安装第三方防病毒软件，但是对于初上手的电脑用户，最好还是安装一款靠谱的第三方安全软件，并作一些妥当的配置。请不要同时安装多款第三方安全软件！
       - name: 维护
         icon: fas fa-wrench
         config: maintenance
