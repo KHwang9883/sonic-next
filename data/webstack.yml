@@ -17,13 +17,13 @@ menu:
         icon: fab fa-chrome
         config: browser
         description: 一般来说，除系统自带的浏览器外，以下浏览器只安装一款即可。
-      - name: 邮箱
-        icon: fas fa-envelope
-        config: mail
       - name: 下载
         icon: fas fa-download
         config: download
         description: 浏览器的下载功能已经可以满足大部分用户的下载需求。对于有需要的用户，这里也列出了几款专用的下载客户端。
+      - name: 邮箱
+        icon: fas fa-envelope
+        config: mail
   - name: 工作效率
     icon: fas fa-laptop-file
     submenu:
@@ -36,13 +36,14 @@ menu:
       - name: 压缩
         icon: fas fa-file-zipper
         config: zipper
+        description: 虽然最新版 Windows 已经内置了对多种压缩格式的支持，但不算好用。可以下载下面的第三方压缩软件，只安装一款即可。
       - name: 网盘
         icon: fas fa-cloud
         config: cloud
       - name: 输入法
         icon: fas fa-keyboard
         config: input
-        description: Windows 系统自带的输入法已经可以满足大部分用户的需求。对于有云同步、语音输入等高级功能需求的用户，这里也列出了几款国产输入法。
+        description: Windows 系统自带的输入法已经可以满足大部分用户的需求。对于有云同步、语音输入等高级功能需求的用户，这里也列出了几款国产输入法。以下输入法只安装一款即可。
       - name: 效率
         icon: fas fa-tools
         config: efficiency
