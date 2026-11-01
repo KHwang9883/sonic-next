@@ -16,6 +16,7 @@ menu:
       - name: 浏览器
         icon: fab fa-chrome
         config: browser
+        description: 一般来说，除系统自带的浏览器外，以下浏览器只安装一款即可。
       - name: 邮箱
         icon: fas fa-envelope
         config: mail
@@ -28,7 +29,7 @@ menu:
     submenu:
       - name: 办公
         icon: fas fa-briefcase
-        config: office  
+        config: office
       - name: AI
         icon: fas fa-brain
         config: ai
