@@ -1,0 +1,16 @@
+- name: 网易邮箱大师
+  url: https://dashi.163.com/download.html
+  img: dashi.png
+  description: 全平台邮箱客户端
+  winget: NetEase.MailMaster
+- name: Foxmail
+  url: https://www.foxmail.com/
+  img: foxmail.png
+  description: 国内老牌邮箱客户端，腾讯出品
+  winget: Tencent.Foxmail
+- name: Thunderbird
+  foss: true
+  url: https://www.thunderbird.net/zh-CN/
+  img: thunderbird.png
+  description: 知名开源邮箱客户端
+  winget: Mozilla.Thunderbird.zh-CN

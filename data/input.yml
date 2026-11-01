@@ -1,0 +1,21 @@
+- name: 微信输入法
+  url: https://z.weixin.qq.com/
+  img: weixin.png
+  description: 微信出品的输入法
+  winget: Tencent.WeType
+- name: 豆包输入法
+  url: https://shurufa.doubao.com/pc
+  img: doubaoinput.png
+  description: 豆包出品的输入法
+  winget: ByteDance.DoubaoInputMethod
+- name: QQ 拼音输入法
+  url: https://qq.pinyin.cn/
+  img: qqpinyin.png
+  description: QQ 拼音输入法
+  winget: Tencent.QQPinyin
+- name: 搜狗输入法
+  pup: true
+  url: https://www.sogou.com/
+  img: sogouinput.png
+  description: 仅推荐给习惯该输入法的用户
+  winget: Sogou.SogouInput

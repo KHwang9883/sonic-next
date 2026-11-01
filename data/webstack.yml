@@ -1,21 +1,101 @@
 # 站点元数据
-title: 我的导航站
-subtitle: 精选软件与资源
+title: 音速 NEXT
+subtitle: Windows 装机导航
 favicon: /favicon.svg
 
 # 侧边栏菜单结构
 # 每个菜单项通过 config 字段引用 data/ 目录下的同名 YAML 文件（不含 .yml 后缀）
 # 顶层菜单项可直接配置 config，也可通过 submenu 定义二级分组
 menu:
-  - name: 示例分类
-    icon: fas fa-star
-    config: demo
-  - name: 分组示例
-    icon: fas fa-layer-group
+  - name: 通讯上网
+    icon: fab fa-internet-explorer
     submenu:
-      - name: 子分类示例
-        icon: fas fa-cube
-        config: demoSub
+      - name: 聊天
+        icon: fas fa-message
+        config: chat
+      - name: 浏览器
+        icon: fab fa-chrome
+        config: browser
+      - name: 邮箱
+        icon: fas fa-envelope
+        config: mail
+      - name: 下载
+        icon: fas fa-download
+        config: download
+        description: 浏览器的下载功能已经可以满足大部分用户的下载需求。对于有需要的用户，这里也列出了几款专用的下载客户端。
+  - name: 工作效率
+    icon: fas fa-laptop-file
+    submenu:
+      - name: 办公
+        icon: fas fa-briefcase
+        config: office  
+      - name: AI
+        icon: fas fa-brain
+        config: ai
+      - name: 压缩
+        icon: fas fa-file-zipper
+        config: zipper
+      - name: 网盘
+        icon: fas fa-cloud
+        config: cloud
+      - name: 输入法
+        icon: fas fa-keyboard
+        config: input
+        description: Windows 系统自带的输入法已经可以满足大部分用户的需求。对于有云同步、语音输入等高级功能需求的用户，这里也列出了几款国产输入法。
+      - name: 效率
+        icon: fas fa-tools
+        config: efficiency
+  - name: 影音图像
+    icon: fas fa-photo-film
+    submenu:
+      - name: 视频
+        icon: fas fa-video
+        config: video
+      - name: 音乐
+        icon: fas fa-music
+        config: music
+      - name: 图片
+        icon: fas fa-image
+        config: image
+        description: Windows 系统默认的图片查看器已经可以满足绝大部分用户的需求，一般无需安装第三方看图软件。
+      - name: 创作
+        icon: fas fa-film
+        config: mediacreation
+  - name: 安全维护
+    icon: fas fa-shield-alt
+    submenu:
+      - name: 防病毒
+        icon: fas fa-virus-slash
+        config: antivirus
+        description: 虽然 Windows 系统自带安全中心，理论上无需安装第三方防病毒软件，但是对于初上手的电脑用户，最好还是安装一款靠谱的第三方安全软件，并作一些妥当的配置。
+      - name: 维护
+        icon: fas fa-wrench
+        config: maintenance
+        description: 仅在电脑出现故障或有需要时下载使用。
+      - name: 验机
+        icon: fas fa-circle-check
+        config: yanji
+        description: 新电脑和二手电脑验机常用的软件。
+  - name: 手机互联
+    nameAlt: 互联
+    icon: fas fa-mobile-alt
+    config: mobile
+  - name: 游戏相关
+    icon: fas fa-gamepad
+    submenu:
+      - name: 平台
+        icon: fab fa-itch-io
+        config: gameplatform
+      - name: 工具
+        icon: fas fa-puzzle-piece
+        config: gametool
+  - name: 站长推荐
+    nameAlt: 推荐
+    icon: fas fa-thumbs-up
+    config: recommend
+  - name: 致敬
+    icon: fas fa-trophy
+    config: salute 
 
 about:
   url: /about/
@@ -29,11 +109,5 @@ aboutPage:
   website:
     head: 关于本站
     md: about.md
-  webmaster:
-    head: 本站站长
-    name: 站长昵称
-    url: https://example.com/
-    img: missing.png
-    description: 一句话简介
 
-since: 2024
+since: 2026

@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#3b82f6"/>
-  <g fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round">
-    <path d="M18 22h28"/>
-    <path d="M18 32h28"/>
-    <path d="M18 42h16"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <g fill="#000000">
+    <path d="M 88 135 C 168 139, 248 133, 328 117 L 328 177 C 248 193, 168 199, 88 195 Z"/>
+    <path d="M 88 233 C 184 237, 280 231, 376 215 L 376 275 C 280 291, 184 297, 88 293 Z"/>
+    <path d="M 88 331 C 200 335, 312 329, 424 313 L 424 373 C 312 389, 200 395, 88 391 Z"/>
   </g>
 </svg>

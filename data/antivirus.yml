@@ -1,0 +1,37 @@
+- name: 火绒安全
+  hot: true
+  url: https://www.huorong.cn/
+  img: huorong.png
+  description: 国内屈指可数的不骚扰用户的防病毒软件
+- name: 悟空安全
+  url: https://www.wukongsafe.cn/
+  img: wukongsafe.png
+  description: 360 主打「不弹广告」「不做捆绑」的安全软件
+- name: 360 安全卫士
+  pup: true
+  url: https://weishi.360.cn/
+  img: 360safe.png
+  description: 仅推荐给偏好 360 全家桶的用户，「极速版」相对少广告
+- name: 腾讯电脑管家
+  pup: true
+  url: https://guanjia.qq.com/main.html
+  img: qqguanjia.png
+  description: 仅推荐给偏好国产知名安全软件且不喜欢 360 的用户
+- name: 360 急救箱
+  url: https://weishi.360.cn/jijiuxiang/
+  img: 360jjx.png
+  description: 查杀顽固木马病毒，仅在需要时使用
+- name: Geek Uninstaller
+  url: https://geekuninstaller.com/
+  img: geek.png
+  description: 极客软件卸载工具
+  winget: GeekUninstaller.GeekUninstaller
+- name: 软件屏蔽器
+  foss: true
+  url: https://github.com/the1812/Malware-Patch
+  img: mwp.png
+  description: 阻止安装不受欢迎的流氓软件
+- name: SoftCnKiller
+  url: https://free.lanzoux.com/b0cpu1guf
+  img: softcnkiller.png
+  description: 清理已安装的流氓软件

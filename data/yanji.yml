@@ -1,0 +1,9 @@
+- name: 图吧工具箱
+  url: http://www.tbtool.cn/
+  img: tbtool.png
+  description: 纯净的硬件工具箱
+- name: 笔吧验机
+  foss: true
+  url: https://github.com/Bibapcs/BibaYanji
+  img: biba.jpg
+  description: 笔吧评测室出品硬件配置核对工具

@@ -92,7 +92,7 @@ export function getNavData(): NavData {
   }
 
   return {
-    title: webstackConfig.title ?? '我的导航站',
+    title: webstackConfig.title ?? '',
     subtitle: webstackConfig.subtitle ?? '',
     favicon: webstackConfig.favicon ?? '/favicon.svg',
     banner: webstackConfig.banner,

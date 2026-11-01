@@ -1,0 +1,40 @@
+- name: 豆包
+  url: https://www.doubao.com/
+  img: doubao.png
+  description: 字节跳动旗下 AI 助手
+  winget: ByteDance.Doubao
+- name: WorkBuddy
+  url: https://copilot.tencent.com/work/
+  img: workbuddy.png
+  description: 腾讯云智能体办公助手
+  winget: Tencent.WorkBuddy
+- name: DeepSeek
+  url: https://chat.deepseek.com/
+  img: deepseek.png
+  description: 探索未至之境 (网页端)
+- name: TRAE
+  url: https://www.trae.cn/ide
+  img: trae.png
+  description: 字节跳动智能体编程办公助手
+  winget: ByteDance.Trae.CN
+- name: 千问
+  url: https://www.qianwen.com/
+  img: qwen.png
+  description: 阿里巴巴旗下 AI 助手
+  winget: Alibaba.Qianwen
+- name: 元宝
+  url: https://yuanbao.tencent.com/
+  img: yuanbao.png
+  description: 轻松工作 多点生活
+  winget: Tencent.Yuanbao
+- name: 智谱清言
+  url: https://chatglm.cn/
+  img: chatglm.png
+  description: GLM 千亿参数对话模型
+  winget: ZhipuAI.ChatGLM
+- name: Cherry Studio
+  foss: true
+  url: https://cherry-ai.com/
+  img: cherrystudio.png
+  description: 全能 AI 工作站
+  winget: kangfenmao.CherryStudio

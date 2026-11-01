@@ -1,0 +1,40 @@
+- name: DaVinci Resolve
+  url: https://www.blackmagicdesign.com/cn/products/davinciresolve/
+  img: davinci.png
+  description: 免费全能剪辑工具
+- name: 剪映专业版
+  url: https://www.capcut.cn/
+  img: capcut.png
+  description: 全能易用的桌面端剪辑软件
+  winget: ByteDance.JianyingPro
+- name: 必剪
+  url: https://bcut.bilibili.cn/
+  img: bcut.png
+  description: B 站出品的视频剪辑软件
+  winget: Bilibili.Bcut
+- name: OBS Studio
+  foss: true
+  url: https://obsproject.com/zh-cn/download
+  img: obs.png
+  description: 视频录制 & 直播软件
+  winget: OBSProject.OBSStudio
+- name: 抖音直播伴侣
+  url: https://streamingtool.douyin.com/
+  img: douyinlivestudio.png
+  description: 多元丰富，连接你我
+  winget: ByteDance.StreamingTool
+- name: 哔哩哔哩直播姬
+  url: https://live.bilibili.com/liveHime
+  img: livehime.png
+  description: B 站官方直播软件
+  winget: Bilibili.Livehime
+- name: Audacity
+  foss: true
+  url: https://www.audacityteam.org/download/
+  img: audacity.png
+  description: 开源音频剪辑工具
+  winget: Audacity.Audacity
+- name: 小丸工具箱
+  url: https://maruko.appinn.me/
+  img: maruko.png
+  description: 视频压制神器

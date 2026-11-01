@@ -1,0 +1,47 @@
+- name: PotPlayer
+  url: http://potplayer.daum.net/?lang=zh_CN
+  img: potplayer.png
+  description: 解码能力强的本地播放器
+  winget: Daum.PotPlayer
+- name: VLC media player
+  foss: true
+  url: https://www.videolan.org/vlc/
+  img: vlc.png
+  description: 开源本地多媒体播放器
+  winget: VideoLAN.VLC
+- name: 腾讯视频
+  pup: true
+  url: https://v.qq.com/download.html
+  img: tencentvideo.png
+  description: 在线视频平台
+  winget: Tencent.TencentVideo
+- name: 爱奇艺
+  pup: true
+  url: https://www.iqiyi.com/appstore.html
+  img: iqiyi.png
+  description: 在线视频平台
+  winget: iQIYI.iQIYI
+- name: 抖音
+  url: https://www.douyin.com/
+  img: douyin.png
+  description: 短视频平台
+  winget: ByteDance.Douyin
+- name: 哔哩哔哩
+  url: https://app.bilibili.com/
+  img: bilibili.png
+  description: B 站官方客户端
+  winget: Bilibili.Bilibili
+- name: 优酷
+  pup: true
+  url: https://www.youku.com/ku/product/index
+  img: youku.png
+  description: 在线视频平台
+  winget: Youku.Youku
+- name: 芒果 TV
+  url: https://www.mgtv.com/app/
+  img: mgtv.png
+  description: 湖南卫视旗下视频平台
+- name: 央视影音
+  url: https://app.cctv.com/
+  img: cbox.png
+  description: CCTV 电视直播客户端

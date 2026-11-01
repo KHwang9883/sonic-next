@@ -1,0 +1,12 @@
+- name: 你缺失的那门计算机课
+  url: https://www.criwits.top/missing/
+  img: missing.png
+  description: 适合电脑小白的电脑使用技巧手册
+- name: 猫啃
+  url: https://www.maoken.com/
+  img: maoken.png
+  description: 免费商用字体下载
+- name: Kevin Huang 的导航站
+  url: https://nav.kevinh.wang/
+  img: blog.png
+  description: 我做的另一个「个人向」导航站

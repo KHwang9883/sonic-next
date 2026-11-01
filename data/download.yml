@@ -1,0 +1,17 @@
+- name: Motrix
+  foss: true
+  url: https://motrix.app/zh-CN/
+  img: motrix.png
+  description: 开源全能下载工具
+  winget: agalwood.Motrix
+- name: 迅雷
+  pup: true
+  url: https://pc.xunlei.com/
+  img: thunder.png
+  description: 当心广告骚扰
+  winget: Thunder.Thunder
+- name: Free Download Manager
+  url: https://www.freedownloadmanager.org/zh/
+  img: fdm.png
+  description: 全能下载工具
+  winget: SoftDeluxe.FreeDownloadManager

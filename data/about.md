@@ -1,21 +1,28 @@
-本站是一个基于 [Astro](https://astro.build/) 框架 + [Tailwind CSS](https://tailwindcss.com/) 构建的静态导航站模板，所有栏目与条目均由 `data/` 目录下的 YAML 文件驱动，无需改动代码即可增删内容。
+本站是一个基于 Astro 7 + Tailwind CSS v4 的全新装机（软件）导航站。
 
-站内的条目与分类均为演示数据，请在 `data/` 目录中替换为你自己的内容。
+## 本站是：
 
-## 标签说明
+- **一个真正面向大众的装机导航站** — 真正符合各类水平的用户，对小白更友好，不排斥某些国产软件
+- **[狼导 - 音速装机](https://sonic.volf.club/) 的精神延续** — 一些内容与原音速装机一脉相承，但进行了更大众化的优化和扩展
 
-- 标有 <i class="fab fa-osi"></i> 的条目为自由/开源软件（`foss: true`）
-- 标有 <i class="fas fa-fire"></i> 的条目为特别推荐的热门条目（`hot: true`）
-- 标有 <i class="fas fa-dollar-sign"></i> 的条目为买断制收费软件（`paid: true`）
-- 标有 <i class="fas fa-user"></i> 的条目为与站长有直接关联的项目/网站（`affiliate: true`）
-- 标有 <i class="fas fa-stop-circle"></i> 的条目为近期未使用但仍作推荐（`abandoned: true`）
-- 标有 <i class="fas fa-plane"></i> 的条目需借助代理等手段访问（`require_proxy: required`），<span class="proxy-optional"><i class="fas fa-plane"></i></span> 表示可能需借助代理也可能直连即可访问（`require_proxy: optional`）
-- 条目卡片上的「安装」按钮（`winget` 字段）可将 `winget install` 命令一键复制到剪贴板
+## 本站不是：
 
-以上标签均由 YAML 字段开关，字段说明见 README.md 的「数据字段」章节。
+- **极客向站点** — 可右转我的个人导航站：https://nav.kevinh.wang/
+- **教程站点** — 本站不是任何软件的使用教程。如需了解电脑使用方面的相关知识，可参考 [你缺失的那门计算机课](https://www.criwits.top/missing/)
 
-## 如何贡献内容
+## 图标说明
 
-1. 在 `data/` 目录下新建或编辑分类 YAML 文件，按 `NavItem` 结构添加条目；
-2. 若为新增分类，在 `data/webstack.yml` 的 `menu` 中补充对应的 `config` 项；
-3. 将条目图标放入 `public/images/`，`img` 字段只需填写文件名。
+- 标有 <i class="fab fa-osi"></i> 图标的软件均为 [自由/开源软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html)
+- 标有 <i class="fas fa-fire"></i> 的软件为该分类中特别推荐的软件
+- 标有 <i class="fas fa-dollar-sign"></i> 的软件为买断制或订阅制收费软件
+- 标有 <i class="fas fa-bullhorn"></i> 的软件可能包含捆绑或用户不需要的功能，建议进行调优并谨慎使用
+
+## 许可协议
+
+> 署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)
+>
+> 您可以自由地：共享 — 在任何媒介以任何形式复制；演绎 — 修改、转换或以本作品为基础进行创作，在任何用途下，甚至商业目的。
+>
+> 惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书；相同方式共享 — 如果您再混合、转换或者基于本作品进行创作，您必须基于与原先许可协议相同的许可协议分发您贡献的作品；没有附加限制 — 您不得适用法律术语或者技术措施从而限制其他人做许可协议允许的事情。
+
+软件 LOGO 仅用于展示，版权属于相应软件公司或个人。

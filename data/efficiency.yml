@@ -1,0 +1,32 @@
+- name: Everything
+  url: https://www.voidtools.com/zh-cn/downloads/
+  img: everything.png
+  description: 文件查找利器
+  winget: voidtools.Everything
+- name: PowerToys
+  foss: true
+  url: https://github.com/microsoft/PowerToys/releases
+  img: powertoys.png
+  description: 微软出品系统增强工具
+  winget: Microsoft.PowerToys
+- name: File Converter
+  foss: true
+  url: https://github.com/Tichau/FileConverter
+  img: converter.png
+  description: 右键菜单转换媒体文件格式
+  winget: AdrienAllard.FileConverter
+- name: QuickLook
+  foss: true
+  url: https://github.com/QL-Win/QuickLook
+  img: quicklook.png
+  description: 按下空格键快速预览文件
+  winget: QL-Win.QuickLook
+- name: WizTree
+  url: https://diskanalyzer.com/download
+  img: wiztree.png
+  description: 轻松查找大文件
+  winget: AntibodySoftware.WizTree
+- name: 菲菲更名宝贝 之 得意非凡
+  url: http://www.ffhome.com/works/1406.html
+  img: feifei.png
+  description: 强大的批量重命名工具

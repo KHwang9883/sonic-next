@@ -1,113 +1,25 @@
-# 导航站模板
+# 音速 NEXT - Windows 装机导航
 
-基于 Astro 7 + Tailwind CSS v4 的静态导航/书签站点模板。所有栏目与条目均由 `data/` 目录下的 YAML 文件驱动，构建产物为纯静态文件，可直接部署到任意静态托管服务。
+[![License: CC BY-SA 4.0](public/images/cc-by-sa-4.0-80x15.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-## 特性
+基于 Astro 7 + Tailwind CSS v4 的全新装机（软件）导航站。
 
-- **数据驱动** — 菜单结构、条目内容、关于页面全部来自 YAML / Markdown，增删内容无需改动代码
-- **条目标签** — 支持开源、收费、关联、热门、已弃用、代理访问等标签，以及 winget 一键复制安装命令
-- **站点外观** — 深色模式（本地持久化、无闪烁）、响应式卡片网格、移动端侧边栏、锚点导航、回到顶部
+## 本站是：
 
-## 快速开始
+- **一个真正面向大众的装机导航站** — 真正符合各类水平的用户，对小白更友好，不排斥某些国产软件
+- **[狼导 - 音速装机](https://sonic.volf.club/) 的精神延续** — 一些内容与原音速装机一脉相承，但进行了更大众化的优化和扩展
 
-```bash
-bun install
-bun run dev
-```
+## 本站不是：
 
-常用命令：
+- **极客向站点** — 可右转我的个人导航站：https://nav.kevinh.wang/
+- **教程站点** — 本站不是任何软件的使用教程。如需了解电脑使用方面的相关知识，可参考 [你缺失的那门计算机课](https://www.criwits.top/missing/)
 
-| 命令 | 说明 |
-| --- | --- |
-| `bun run dev` | 启动开发服务器 |
-| `bun run build` | 构建到 `dist/` |
-| `bun run preview` | 预览生产构建 |
-| `bun run check` | Astro 类型检查 |
+## 许可协议
 
-## 目录结构
+> 署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)
 
-```
-├── src/
-│   ├── components/         # Astro 组件（TopNav / Sidebar / CategorySection / LinkCard / Footer / BackToTop）
-│   ├── data/
-│   │   ├── load.ts         # 构建时读取 YAML 并组装导航树
-│   │   └── types.ts        # NavItem 等类型定义
-│   ├── layouts/Layout.astro
-│   ├── pages/              # index.astro（首页）、about.astro（关于页）
-│   ├── scripts/main.ts     # 客户端交互（深色模式、侧边栏、锚点、winget 复制等）
-│   └── styles/global.css
-├── data/                   # 站点内容
-│   ├── webstack.yml        # 站点元数据 + 菜单结构 + 关于页配置
-│   ├── demo.yml            # 示例分类（演示全部字段）
-│   ├── demoSub.yml         # 二级分组示例
-│   └── about.md            # 关于页面正文
-└── public/
-    ├── favicon.svg         # 站点图标
-    └── images/             # 条目图标（仅保留 missing.png 占位图）
-```
+> 您可以自由地：共享 — 在任何媒介以任何形式复制；演绎 — 修改、转换或以本作品为基础进行创作，在任何用途下，甚至商业目的。
 
-## 改成自己的站点
+> 惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书；相同方式共享 — 如果您再混合、转换或者基于本作品进行创作，您必须基于与原先许可协议相同的许可协议分发您贡献的作品；没有附加限制 — 您不得适用法律术语或者技术措施从而限制其他人做许可协议允许的事情。
 
-1. **站点信息** — 编辑 `data/webstack.yml` 顶部的 `title`、`subtitle`、`favicon`
-2. **菜单结构** — 编辑 `data/webstack.yml` 的 `menu`，每个 `config` 值对应 `data/` 下同名 YAML 文件
-3. **条目内容** — 编辑或新建 `data/*.yml`，参考 `data/demo.yml` 的字段写法
-4. **关于页面** — 正文写在 `data/about.md`；站长信息在 `data/webstack.yml` 的 `aboutPage.webmaster` 中配置，不需要时整段删除
-5. **站点域名** — 编辑 `astro.config.mjs` 的 `site` 字段
-6. **图标资源** — 条目图片放入 `public/images/`；替换 `public/favicon.svg` 为你的站点图标
-7. **顶栏与页脚** — `src/components/TopNav.astro` 中的 GitHub 链接、`src/components/Footer.astro` 中的版权信息
-
-## 数据字段
-
-`data/*.yml` 中的每个条目对应一个 `NavItem` 对象：
-
-| 字段 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| `name` | string | 是 | 条目名称 |
-| `url` | string | 是 | 跳转链接 |
-| `img` | string | 是 | 图标。填写文件名（如 `demo.png`）会自动补全为 `/images/demo.png`；以 `/` 或 `http` 开头时按原样使用 |
-| `description` | string | 是 | 一句话描述 |
-| `foss` | boolean | 否 | `true` 显示 OSI 开源图标 |
-| `paid` | boolean | 否 | `true` 显示美元图标（买断制收费） |
-| `affiliate` | boolean | 否 | `true` 显示用户图标（与站长有直接关联） |
-| `require_proxy` | `required` \| `optional` | 否 | 显示飞机图标（需代理 / 可能需代理） |
-| `hot` | boolean | 否 | `true` 在名称后显示红色火焰徽章 |
-| `abandoned` | boolean | 否 | `true` 在名称后显示橙色停止圆圈徽章 |
-| `winget` | string | 否 | winget 包 ID（如 `Microsoft.PowerToys`），显示一键复制安装命令按钮 |
-
-标签显示顺序：OSI → 付费 → 关联 → 代理 → winget 按钮，热门/已弃用徽章位于名称之后。
-
-`data/webstack.yml` 的 `menu` 项结构：
-
-```yaml
-menu:
-  # 顶层分类：直接指定 config
-  - name: 分类名称
-    icon: fas fa-star          # Font Awesome 类名
-    config: demo               # 对应 data/demo.yml
-  # 二级分组：通过 submenu 定义
-  - name: 分组名称
-    icon: fas fa-layer-group
-    submenu:
-      - name: 子分类名称
-        icon: fas fa-cube
-        config: demoSub
-```
-
-## 新增分类
-
-1. 在 `data/` 下新建 YAML 文件（如 `myCategory.yml`），按 `NavItem` 结构填写条目
-2. 在 `data/webstack.yml` 的 `menu` 中新增一项，`config` 填写文件名（不含 `.yml`）
-3. 将条目图标放入 `public/images/`
-
-## 部署
-
-产物为纯静态文件，Cloudflare Pages、GitHub Pages、Netlify、Vercel 等均可直接托管：
-
-- 构建命令：`bun run build`
-- 输出目录：`dist/`
-
-## 说明
-
-- 模板不附带任何第三方软件图标，示例条目统一使用 `public/images/missing.png` 占位图（同时也是图片加载失败时的兜底图）
-- 界面文本统一为简体中文；如需其他语言，修改 `data/`、`src/components/` 中的文案即可
-- 配色令牌定义在 `tailwind.config.ts` 与 `src/styles/global.css`，深色模式通过 `<html class="dark">` 控制
+软件 LOGO 仅用于展示，版权属于相应软件公司或个人。
