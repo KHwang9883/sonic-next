@@ -86,6 +86,7 @@ menu:
       - name: 平台
         icon: fab fa-itch-io
         config: gameplatform
+        description: 像 Steam、Epic、EA 这样的游戏平台提供的游戏绝大部分都需要付费购买，这些境外游戏平台使用时可能需要加速器（见下），仅加速游戏平台时一般是免费的。
       - name: 工具
         icon: fas fa-puzzle-piece
         config: gametool

@@ -33,7 +33,7 @@
 - name: 暴雪战网
   url: https://download.battlenet.com.cn/zh-cn/
   img: battlenet.png
-  description: 暴雪游戏平台
+  description: 暴雪游戏平台（国服）
 - name: TC GAME
   url: https://tcg.tiancity.com/homepage/
   img: tcgame.png
