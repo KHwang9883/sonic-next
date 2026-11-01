@@ -277,6 +277,11 @@
     color: #e0e0e0;
   }
 
+  /* 深色模式下将单色 logo 覆盖为与标题文字相同的颜色 */
+  .dark .top-nav-logo-img {
+    filter: brightness(0) invert(87.8%);
+  }
+
   .dark .top-nav-toggle:hover {
     background: #3a3c3f;
     color: #d4d4d8;
