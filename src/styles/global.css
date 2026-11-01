@@ -454,11 +454,20 @@
 }
 
 .top-nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.0625rem;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: -0.01em;
   white-space: nowrap;
+}
+
+.top-nav-logo-img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .top-nav-action {
