@@ -73,7 +73,7 @@ menu:
       - name: 维护
         icon: fas fa-wrench
         config: maintenance
-        description: 仅在电脑出现故障或有需要时下载使用。
+        description: 仅在电脑出现故障或有需要时下载使用。操作前请备份重要数据！
       - name: 验机
         icon: fas fa-circle-check
         config: yanji
@@ -88,7 +88,7 @@ menu:
       - name: 平台
         icon: fab fa-itch-io
         config: gameplatform
-        description: 像 Steam、Epic、EA 这样的游戏平台提供的游戏绝大部分都需要付费购买，这些境外游戏平台使用时可能需要加速器（见下），仅加速游戏平台时一般是免费的。
+        description: 像 Steam、Epic、EA 这样的游戏平台提供的游戏绝大部分都需要付费购买，使用这些境外游戏平台可能需要加速器（见下），仅加速游戏平台时一般是免费的。
       - name: 工具
         icon: fas fa-puzzle-piece
         config: gametool
