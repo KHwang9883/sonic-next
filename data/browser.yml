@@ -1,7 +1,7 @@
 - name: Microsoft Edge
   url: https://www.microsoft.com/zh-cn/edge
   img: edge.png
-  description: Windows 系统自带浏览器
+  description: Windows 10/11 系统自带浏览器
   winget: Microsoft.Edge
 - name: Google Chrome
   url: https://www.google.cn/intl/zh-CN/chrome/

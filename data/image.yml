@@ -4,7 +4,6 @@
   description: 修图设计软件
   winget: Canva.Affinity
 - name: paint.net
-  abandoned: true
   url: https://paint.net/
   img: pdn.png
   description: 更强大的画图
