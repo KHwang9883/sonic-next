@@ -24,6 +24,22 @@ menu:
       - name: 邮箱
         icon: fas fa-envelope
         config: mail
+  - name: 影音图像
+    icon: fas fa-photo-film
+    submenu:
+      - name: 视频
+        icon: fas fa-video
+        config: video
+      - name: 音乐
+        icon: fas fa-music
+        config: music
+      - name: 图片
+        icon: fas fa-image
+        config: image
+        description: Windows 系统默认的图片查看器已经可以满足绝大部分用户的需求，一般无需安装第三方看图软件。
+      - name: 创作
+        icon: fas fa-film
+        config: mediacreation
   - name: 工作效率
     icon: fas fa-laptop-file
     submenu:
@@ -47,22 +63,9 @@ menu:
       - name: 效率
         icon: fas fa-tools
         config: efficiency
-  - name: 影音图像
-    icon: fas fa-photo-film
-    submenu:
-      - name: 视频
-        icon: fas fa-video
-        config: video
-      - name: 音乐
-        icon: fas fa-music
-        config: music
-      - name: 图片
-        icon: fas fa-image
-        config: image
-        description: Windows 系统默认的图片查看器已经可以满足绝大部分用户的需求，一般无需安装第三方看图软件。
-      - name: 创作
-        icon: fas fa-film
-        config: mediacreation
+      - name: 互联
+        icon: fas fa-mobile-alt
+        config: mobile
   - name: 安全维护
     icon: fas fa-shield-alt
     submenu:
@@ -78,10 +81,6 @@ menu:
         icon: fas fa-circle-check
         config: yanji
         description: 新电脑和二手电脑验机常用的软件。
-  - name: 手机互联
-    nameAlt: 互联
-    icon: fas fa-mobile-alt
-    config: mobile
   - name: 游戏相关
     icon: fas fa-gamepad
     submenu:
