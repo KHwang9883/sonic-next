@@ -35,7 +35,6 @@
   description: 创建 USB 启动盘
   winget: Rufus.Rufus
 - name: Ventoy
-  hot: true
   foss: true
   url: https://www.ventoy.net/cn/index.html
   img: ventoy.png
