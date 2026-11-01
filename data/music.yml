@@ -23,7 +23,6 @@
   url: https://www.apple.com.cn/apple-music/
   img: applemusic.png
   description: 苹果音乐平台
-  winget: Apple.Music
 - name: foobar2000
   url: http://www.foobar2000.org/download
   img: foobar.png
