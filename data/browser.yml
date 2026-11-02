@@ -18,7 +18,7 @@
   pup: true
   url: https://www.quark.cn/
   img: quark.png
-  description: 国产浏览器
+  description: 国产「AI 浏览器」
   winget: Alibaba.Quark
 - name: 360 极速浏览器
   pup: true
@@ -32,3 +32,8 @@
   img: qqbrowser.png
   description: 仅推荐给不介意国产浏览器的用户
   winget: Tencent.QQBrowser
+- name: 搜狗浏览器
+  pup: true
+  url: https://sogou.browser.qq.com/
+  img: sogoubrowser.png
+  description: 仅推荐给不介意国产浏览器的用户
