@@ -32,6 +32,15 @@
   img: chatglm.png
   description: GLM 千亿参数对话模型
   winget: ZhipuAI.ChatGLM
+- name: Kimi
+  url: https://www.kimi.com/
+  img: kimi.png
+  description: 月之暗面 AI 助手
+  winget: MoonshotAI.Kimi
+- name: Marvis
+  url: https://marvis.qq.com/
+  img: marvis.png
+  description: 腾讯系统级 AI 助手
 - name: Cherry Studio
   foss: true
   url: https://cherry-ai.com/

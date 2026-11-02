@@ -18,3 +18,8 @@
   img: feishu.png
   description: 工作通讯软件
   winget: ByteDance.Feishu
+- name: 钉钉
+  url: https://www.dingtalk.com/download
+  img: dingtalk.png
+  description: 工作通讯软件
+  winget: Alibaba.DingTalk.Mainland

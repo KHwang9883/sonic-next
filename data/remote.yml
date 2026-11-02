@@ -1,0 +1,13 @@
+- name: 网易 UU 远程
+  url: https://uuyc.163.com/
+  img: uuremote.png
+  description: 免费远程控制软件
+  winget: NetEase.UURemote
+- name: 贝锐向日葵
+  url: https://sunlogin.oray.com/download
+  img: sunorigin.png
+  description: 远程控制软件
+- name: ToDesk
+  url: https://www.todesk.com/download.html
+  img: todesk.png
+  description: 远程控制软件

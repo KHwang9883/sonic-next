@@ -18,6 +18,10 @@
   url: https://download.kugou.com/
   img: kugou.png
   description: 国内用户量第一的音乐软件
+- name: 酷我音乐
+  url: https://www.kuwo.cn/down
+  img: kuwo.png
+  description: 好音质 用酷我
 - name: Apple Music
   paid: true
   url: https://www.apple.com.cn/apple-music/

@@ -6,6 +6,10 @@
   url: https://www.maoken.com/
   img: maoken.png
   description: 免费商用字体下载
+- name: 测速网
+  url: https://www.speedtest.cn/
+  img: cesuwang.png
+  description: 网速测试
 - name: Kevin Huang 的导航站
   url: https://nav.kevinh.wang/
   img: blog.png

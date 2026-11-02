@@ -63,6 +63,9 @@ menu:
       - name: 效率
         icon: fas fa-tools
         config: efficiency
+      - name: 远程
+        icon: fas fa-window-restore
+        config: remote
       - name: 互联
         icon: fas fa-mobile-alt
         config: mobile
@@ -81,6 +84,10 @@ menu:
         icon: fas fa-circle-check
         config: yanji
         description: 新电脑和二手电脑验机常用的软件。
+      - name: 驱动
+        icon: fas fa-gears
+        config: driver
+        description: 品牌台式机或新购笔记本电脑的用户可跳过此节，因为厂商已经在电脑中预装了驱动。对于组装电脑或重装系统的用户，Windows 10/11 系统会自动补齐一部分驱动，但版本可能较旧。建议将显卡驱动更新至最新版本；其他硬件驱动受篇幅所限，此处无法逐一列出各厂商的官网，请根据实际硬件型号前往对应厂商官网获取。
   - name: 游戏相关
     icon: fas fa-gamepad
     submenu:

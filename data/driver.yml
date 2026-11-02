@@ -1,0 +1,16 @@
+- name: NVIDIA 显卡驱动
+  url: https://www.nvidia.cn/drivers/
+  img: nvidia.png
+  description: 可仅下载适用显卡的驱动包，也可使用 NVIDIA App 安装驱动
+- name: AMD 显卡驱动
+  url: https://www.amd.com/zh-cn/support/download/drivers.html
+  img: amd.png
+  description: 下载 AMD 显卡驱动
+- name: Intel 驱动
+  url: https://www.intel.cn/content/www/cn/zh/download-center/home.html
+  img: intel.png
+  description: 下载 Intel 显卡驱动
+- name: 驱动总裁
+  url: https://www.sysceo.com/dc
+  img: sysceo.png
+  description: 相对纯净的第三方驱动管理软件

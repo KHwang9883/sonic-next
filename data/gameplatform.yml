@@ -20,6 +20,10 @@
   url: https://launcher.mihoyo.com/
   img: mihoyolauncher.png
   description: 无限世界，一键启程
+- name: MuMu 模拟器
+  url: https://mumu.163.com/
+  img: mumu.png
+  description: 网易 Android 手游模拟器
 - name: EA App
   url: https://www.ea.com/ea-app
   img: origin.png
