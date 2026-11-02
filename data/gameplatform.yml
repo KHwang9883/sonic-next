@@ -3,11 +3,13 @@
   img: steam.png
   description: 顶级在线游戏平台
   winget: Valve.Steam
+  winget_presets: [gaming, entertainment]
 - name: Epic Games
   url: https://www.epicgames.com/store/zh-CN/
   img: epic.png
   description: 每周都有喜加一
   winget: EpicGames.EpicGamesLauncher
+  winget_presets: [gaming]
 - name: WeGame
   url: https://www.wegame.com.cn/client
   img: wegame.png
@@ -29,11 +31,13 @@
   img: origin.png
   description: EA 游戏平台
   winget: ElectronicArts.EADesktop
+  winget_presets: [gaming]
 - name: Ubisoft Connect
   url: https://zh-cn.ubisoft.com/uplay
   img: uplay.png
   description: 育碧游戏平台
   winget: Ubisoft.Connect
+  winget_presets: [gaming]
 - name: 暴雪战网
   url: https://download.battlenet.com.cn/zh-cn/
   img: battlenet.png

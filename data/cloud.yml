@@ -3,12 +3,14 @@
   url: https://pan.baidu.com/download
   img: baidupan.png
   description: 建议开通会员
-  winget: Baidu.BaiduNetdisk
+  winget: Baidu.BaiduNetdiskDrive
+  winget_presets: [basic, china, office, creative, entertainment]
 - name: 阿里云盘
   url: https://www.aliyundrive.com/
   img: aliyundrive.png
   description: 大容量网盘
   winget: Alibaba.aDrive
+  winget_presets: [entertainment]
 - name: 中国移动云盘
   url: https://yun.139.com/
   img: mcloud.png
@@ -23,6 +25,7 @@
   img: quarkdrive.png
   description: 建议开通会员
   winget: Alibaba.QuarkCloudDrive
+  winget_presets: [office, creative, entertainment]
 - name: iCloud
   url: https://support.apple.com/zh-cn/103232
   img: icloud.png

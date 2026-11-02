@@ -3,21 +3,25 @@
   img: wechat.png
   description: 即时通讯软件
   winget: Tencent.WeChat.Universal
+  winget_presets: [basic, china, office, creative, entertainment]
 - name: QQ
   url: https://im.qq.com/
   img: qq.png
   description: 即时通讯软件
   winget: Tencent.QQ.NT
+  winget_presets: [basic, china, gaming, creative, entertainment]
 - name: 企业微信
   url: https://work.weixin.qq.com/#indexDownload
   img: wechatwork.png
   description: 工作通讯软件
   winget: Tencent.WeCom
+  winget_presets: [office]
 - name: 飞书
   url: https://www.feishu.cn/download
   img: feishu.png
   description: 工作通讯软件
   winget: ByteDance.Feishu
+  winget_presets: [office]
 - name: 钉钉
   url: https://www.dingtalk.com/download
   img: dingtalk.png

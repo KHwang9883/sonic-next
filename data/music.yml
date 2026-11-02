@@ -3,11 +3,13 @@
   img: qqmusic.png
   description: 听我想听的歌
   winget: Tencent.QQMusic
+  winget_presets: [china, entertainment]
 - name: 网易云音乐
   url: https://music.163.com/#/download
   img: cloudmusic.png
   description: 音乐的力量
   winget: NetEase.CloudMusic
+  winget_presets: [basic, gaming, entertainment]
 - name: 汽水音乐
   url: https://www.qishui.com/
   img: qishui.png
@@ -32,8 +34,10 @@
   img: foobar.png
   description: 可扩展的本地音乐播放器
   winget: PeterPawlowski.foobar2000
+  winget_presets: [clean, entertainment, creative]
 - name: 全民 K 歌
   url: https://kg.qq.com/
   img: kg.png
   description: 随心所欲 想唱就唱
   winget: Tencent.WeSing
+  winget_presets: [entertainment]

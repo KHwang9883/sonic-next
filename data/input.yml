@@ -3,6 +3,7 @@
   img: weixin.png
   description: 微信出品的输入法
   winget: Tencent.WeType
+  winget_presets: [basic, office]
 - name: 豆包输入法
   url: https://shurufa.doubao.com/pc
   img: doubaoinput.png
@@ -13,6 +14,7 @@
   img: qqpinyin.png
   description: QQ 拼音输入法
   winget: Tencent.QQPinyin
+  winget_presets: [china]
 - name: 搜狗输入法
   pup: true
   url: https://www.sogou.com/

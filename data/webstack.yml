@@ -120,3 +120,31 @@ aboutPage:
     md: about.md
 
 since: 2026
+
+# 批量安装预设
+# 预设在此处声明，列表顺序即界面显示顺序，第一个预设为批量模式默认预设。
+# 各软件是否属于某个预设，在分类 YAML 的条目上标注即可（可写单个字符串或数组）：
+#   winget_presets: [basic, dev]
+# 未在此声明的预设 id 会按条目上的标注自动补齐（显示名即 id）。
+wingetPresets:
+  - id: basic
+    name: 基础推荐
+    description: 新电脑必备软件
+  - id: china
+    name: 国产优先
+    description: 优先勾选国产软件
+  - id: clean
+    name: 纯净装机
+    description: 开源优先，不包含任何 pup 软件
+  - id: office
+    name: 办公必备
+    description: 预选一些日常办公所需的软件
+  - id: gaming
+    name: 玩家必备
+    description: 游戏玩家必装软件
+  - id: creative
+    name: 媒体创作
+    description: 媒体创作者的必备软件
+  - id: entertainment
+    name: 影音娱乐
+    description: 影音娱乐必装软件

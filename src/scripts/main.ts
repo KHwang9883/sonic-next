@@ -199,6 +199,170 @@ function initLinkCard() {
   })
 }
 
+// ===== 批量安装 =====
+function initBatchInstall() {
+  const toggle = document.getElementById('batch-install-toggle')
+  const bar = document.getElementById('batch-bar')
+  const overlay = document.getElementById('batch-overlay')
+  if (!toggle || !bar || !overlay) return
+
+  const countEl = document.getElementById('batch-count')
+  const modalCountEl = document.getElementById('batch-modal-count')
+  const generateBtn = document.getElementById('batch-generate') as HTMLButtonElement | null
+  const exitBtn = document.getElementById('batch-exit')
+  const closeBtn = document.getElementById('batch-modal-close')
+  const copyBtn = document.getElementById('batch-copy') as HTMLButtonElement | null
+  const saveBtn = document.getElementById('batch-save') as HTMLButtonElement | null
+  const commandArea = document.getElementById('batch-command') as HTMLTextAreaElement | null
+
+  const checkboxes = Array.from(document.querySelectorAll<HTMLInputElement>('[data-batch-checkbox]'))
+  const presetButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-preset]'))
+  let commands: string[] = []
+
+  function clearActivePreset() {
+    presetButtons.forEach((btn) => btn.classList.remove('active'))
+  }
+
+  // 按预设应用勾选状态；传入 null 表示清空全部勾选
+  function applyPreset(id: string | null) {
+    checkboxes.forEach((cb) => {
+      const ids = (cb.dataset.presets || '').split(' ')
+      cb.checked = !!id && ids.includes(id)
+    })
+    presetButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.preset === id))
+    syncState()
+  }
+
+  function selectedBoxes() {
+    return checkboxes.filter((cb) => cb.checked)
+  }
+
+  function syncState() {
+    const count = selectedBoxes().length
+    if (countEl) countEl.textContent = String(count)
+    if (generateBtn) generateBtn.disabled = count === 0
+    checkboxes.forEach((cb) => {
+      cb.closest('.nav-card-wrap')?.classList.toggle('selected', cb.checked)
+    })
+  }
+
+  function closeModal() {
+    overlay.hidden = true
+  }
+
+  function enterBatchMode() {
+    document.body.classList.add('batch-mode')
+    toggle?.setAttribute('aria-pressed', 'true')
+    toggle?.classList.add('active')
+    bar.hidden = false
+    // 每次进入批量模式时应用第一个预设（未配置预设则全部不勾选）
+    applyPreset(presetButtons[0]?.dataset.preset ?? null)
+  }
+
+  function exitBatchMode() {
+    document.body.classList.remove('batch-mode')
+    toggle?.setAttribute('aria-pressed', 'false')
+    toggle?.classList.remove('active')
+    bar.hidden = true
+    closeModal()
+  }
+
+  toggle.addEventListener('click', () => {
+    if (document.body.classList.contains('batch-mode')) exitBatchMode()
+    else enterBatchMode()
+  })
+
+  exitBtn?.addEventListener('click', exitBatchMode)
+  closeBtn?.addEventListener('click', closeModal)
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal()
+  })
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.hidden) closeModal()
+  })
+
+  presetButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      applyPreset(btn.dataset.preset ?? null)
+    })
+  })
+
+  checkboxes.forEach((cb) => {
+    cb.addEventListener('change', () => {
+      // 手动调整后取消预设高亮，表示当前为自定义勾选
+      clearActivePreset()
+      syncState()
+    })
+  })
+
+  // 批量模式下点击卡片本身切换勾选状态，而非跳转链接
+  document.querySelectorAll<HTMLAnchorElement>('[data-nav-card]').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      if (!document.body.classList.contains('batch-mode')) return
+      const wrap = card.closest<HTMLElement>('.nav-card-wrap')
+      if (!wrap || !wrap.classList.contains('nav-card-selectable')) return
+      const cb = wrap.querySelector<HTMLInputElement>('[data-batch-checkbox]')
+      if (!cb) return
+      e.preventDefault()
+      cb.checked = !cb.checked
+      clearActivePreset()
+      syncState()
+    })
+  })
+
+  generateBtn?.addEventListener('click', () => {
+    commands = selectedBoxes().map((cb) => `winget install --id "${cb.dataset.wingetId}"`)
+    if (!commands.length) return
+    if (commandArea) commandArea.value = commands.join('\r\n')
+    if (modalCountEl) modalCountEl.textContent = String(commands.length)
+    overlay.hidden = false
+    commandArea?.focus()
+  })
+
+  copyBtn?.addEventListener('click', () => {
+    const text = commands.join('\r\n')
+    if (!text) return
+    const original = copyBtn.innerHTML
+    const done = (ok: boolean) => {
+      copyBtn.innerHTML = ok
+        ? '<i class="fas fa-check"></i> 已复制'
+        : '<i class="fas fa-triangle-exclamation"></i> 请手动复制'
+      setTimeout(() => {
+        copyBtn.innerHTML = original
+      }, 2000)
+    }
+    const fallback = () => {
+      commandArea?.select()
+      done(false)
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => done(true)).catch(fallback)
+    } else {
+      fallback()
+    }
+  })
+
+  saveBtn?.addEventListener('click', () => {
+    if (!commands.length) return
+    const content = ['@echo off', ...commands, '', 'pause', ''].join('\r\n')
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const today = new Date()
+    const stamp = [
+      today.getFullYear(),
+      String(today.getMonth() + 1).padStart(2, '0'),
+      String(today.getDate()).padStart(2, '0'),
+    ].join('')
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `winget-install-${stamp}.bat`
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    URL.revokeObjectURL(url)
+  })
+}
+
 // ===== 关于页站长卡片点击 =====
 function initAboutPage() {
   const webmasterCard = document.querySelector('[data-webmaster-url]') as HTMLElement | null
@@ -214,6 +378,7 @@ function init() {
   initSidebar()
   initBackToTop()
   initLinkCard()
+  initBatchInstall()
   initAboutPage()
 }
 

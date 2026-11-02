@@ -26,6 +26,7 @@ Bun 1.3.14（在 `packageManager` 字段中声明）。请勿使用 npm/pnpm/yar
 ├── src/                    # Astro 应用源码
 │   ├── components/         # Astro 组件
 │   │   ├── BackToTop.astro
+│   │   ├── BatchInstall.astro
 │   │   ├── CategorySection.astro
 │   │   ├── Footer.astro
 │   │   ├── LinkCard.astro
@@ -81,8 +82,11 @@ interface NavItem {
   abandoned?: boolean   // 名称旁的已弃用徽章（停止圆圈图标，橙色）
   pup?: boolean         // “可能不必要的程序”标签（喇叭图标，橙色）
   winget?: string       // Windows winget 包 ID（如 "ZhipuAI.ChatGLM"）
+  winget_presets?: string[] // 所属批量安装预设（对应 webstack.yml 的 wingetPresets[].id）
 }
 ```
+
+批量安装预设：`webstack.yml` 的 `wingetPresets` 声明预设的 `id`、`name`、`description` 与顺序（第一个为默认预设）；条目用 `winget_presets`（字符串或数组）标注所属预设，未声明的 id 会自动按标注补齐。
 
 ### 组件流程
 

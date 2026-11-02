@@ -9,13 +9,23 @@
   img: wps.png
   description: 国产办公软件
   winget: Kingsoft.WPSOffice.x64
+  winget_presets: [china, office]
+- name: LibreOffice
+  foss: true
+  url: https://www.libreoffice.org/
+  img: libreoffice.png
+  description: 开源办公软件
+  winget: TheDocumentFoundation.LibreOffice
+  winget_presets: [clean]
 - name: 腾讯文档
   url: https://docs.qq.com/home/download
   img: tdocs.png
   description: 支持协作的文档软件
   winget: Tencent.TencentDocs
+  winget_presets: [basic, china, office]
 - name: 腾讯会议
   url: https://meeting.tencent.com/download/
   img: tencentmeeting.png
   description: 视频会议软件
   winget: Tencent.TencentMeeting
+  winget_presets: [office]

@@ -8,11 +8,13 @@
   img: chrome.png
   description: 谷歌浏览器
   winget: Google.Chrome
+  winget_presets: [basic, gaming, creative]
 - name: Firefox
   foss: true
   url: https://www.mozilla.org/zh-CN/firefox/
   img: firefox.png
   description: 火狐浏览器
+  winget_presets: [clean]
   winget: Mozilla.Firefox.zh-CN
 - name: 夸克
   pup: true
@@ -20,6 +22,7 @@
   img: quark.png
   description: 国产「AI 浏览器」
   winget: Alibaba.Quark
+  winget_presets: [office, entertainment]
 - name: 360 极速浏览器
   pup: true
   url: https://browser.360.cn/ee/
@@ -32,6 +35,7 @@
   img: qqbrowser.png
   description: 仅推荐给不介意国产浏览器的用户
   winget: Tencent.QQBrowser
+  winget_presets: [china]
 - name: 搜狗浏览器
   pup: true
   url: https://sogou.browser.qq.com/

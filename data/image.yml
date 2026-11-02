@@ -3,10 +3,12 @@
   img: affinity.png
   description: 修图设计软件
   winget: Canva.Affinity
+  winget_presets: [creative]
 - name: paint.net
   url: https://paint.net/
   img: pdn.png
   description: 更强大的画图
+  winget_presets: [basic, creative]
   winget: dotPDN.PaintDotNet
 - name: GIMP
   foss: true
@@ -14,20 +16,24 @@
   img: gimp.png
   description: 开源修图软件
   winget: GIMP.GIMP
+  winget_presets: [clean, creative]
 - name: Inkscape
   foss: true
   url: https://inkscape.org/release/
   img: inkscape.png
   description: 开源矢量软件
   winget: Inkscape.Inkscape
+  winget_presets: [creative]
 - name: PixPin
   url: https://pixpin.cn/
   img: pixpin.png
   description: 强大且免费的截图贴图工具
   winget: PixPin.PixPin
+  winget_presets: [basic, china, office, creative]
 - name: ScreenToGif
   foss: true
   url: https://www.screentogif.com/downloads
   img: stg.png
   description: 录屏或视频转 Gif
   winget: NickeManarin.ScreenToGif
+  winget_presets: [office, creative]

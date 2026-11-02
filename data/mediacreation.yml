@@ -7,33 +7,39 @@
   img: capcut.png
   description: 全能易用的桌面端剪辑软件
   winget: ByteDance.JianyingPro
+  winget_presets: [office, creative]
 - name: 必剪
   url: https://bcut.bilibili.cn/
   img: bcut.png
   description: B 站出品的视频剪辑软件
   winget: Bilibili.Bcut
+  winget_presets: [creative]
 - name: OBS Studio
   foss: true
   url: https://obsproject.com/zh-cn/download
   img: obs.png
   description: 视频录制 & 直播软件
   winget: OBSProject.OBSStudio
+  winget_presets: [gaming, creative]
 - name: 抖音直播伴侣
   url: https://streamingtool.douyin.com/
   img: douyinlivestudio.png
   description: 多元丰富，连接你我
   winget: ByteDance.StreamingTool
+  winget_presets: [gaming, creative]
 - name: 哔哩哔哩直播姬
   url: https://live.bilibili.com/liveHime
   img: livehime.png
   description: B 站官方直播软件
   winget: Bilibili.Livehime
+  winget_presets: [gaming, creative]
 - name: Audacity
   foss: true
   url: https://www.audacityteam.org/download/
   img: audacity.png
   description: 开源音频剪辑工具
   winget: Audacity.Audacity
+  winget_presets: [creative]
 - name: 小丸工具箱
   url: https://maruko.appinn.me/
   img: maruko.png

@@ -7,6 +7,7 @@
   img: leigod.png
   description: 按小时计费的加速器
   winget: LeiGod.LeiGodAcc
+  winget_presets: [gaming]
 - name: Watt Toolkit
   foss: true
   url: http://steampp.net/

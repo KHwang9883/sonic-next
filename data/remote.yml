@@ -3,6 +3,7 @@
   img: uuremote.png
   description: 免费远程控制软件
   winget: NetEase.UURemote
+  winget_presets: [gaming]
 - name: 贝锐向日葵
   url: https://sunlogin.oray.com/download
   img: sunorigin.png
@@ -11,3 +12,5 @@
   url: https://www.todesk.com/download.html
   img: todesk.png
   description: 远程控制软件
+  winget: Youqu.ToDesk
+  winget_presets: [office]

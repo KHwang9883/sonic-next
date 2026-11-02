@@ -13,9 +13,11 @@ interface Props {
 const { name, nameAlt, icon, items, description } = Astro.props
 const anchorId = name.replace(/\s+/g, '-')
 const displayName = nameAlt || name
+// 该分类下存在支持 winget 的条目时，批量安装模式下才显示
+const hasWinget = items.some((item) => item.winget)
 ---
 
-<div id={anchorId} class="category-anchor">
+<div id={anchorId} class:list={['category-anchor', !hasWinget && 'no-winget']}>
   <div class="category-header">
     <i class={`${icon} category-icon`}></i>
     <div class="category-header-body">

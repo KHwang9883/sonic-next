@@ -3,40 +3,47 @@
   img: potplayer.png
   description: 解码能力强的本地播放器
   winget: Daum.PotPlayer
+  winget_presets: [basic, gaming, creative, entertainment]
 - name: VLC media player
   foss: true
   url: https://www.videolan.org/vlc/
   img: vlc.png
   description: 开源本地多媒体播放器
   winget: VideoLAN.VLC
+  winget_presets: [clean]
 - name: 腾讯视频
   pup: true
   url: https://v.qq.com/download.html
   img: tencentvideo.png
   description: 在线视频平台
   winget: Tencent.TencentVideo
+  winget_presets: [entertainment]
 - name: 爱奇艺
   pup: true
   url: https://www.iqiyi.com/appstore.html
   img: iqiyi.png
   description: 在线视频平台
   winget: iQIYI.iQIYI
+  winget_presets: [entertainment]
 - name: 抖音
   url: https://www.douyin.com/
   img: douyin.png
   description: 短视频平台
   winget: ByteDance.Douyin
+  winget_presets: [entertainment]
 - name: 哔哩哔哩
   url: https://app.bilibili.com/
   img: bilibili.png
   description: B 站官方客户端
   winget: Bilibili.Bilibili
+  winget_presets: [entertainment]
 - name: 优酷
   pup: true
   url: https://www.youku.com/ku/product/index
   img: youku.png
   description: 在线视频平台
   winget: Youku.Youku
+  winget_presets: [entertainment]
 - name: 芒果 TV
   url: https://www.mgtv.com/app/
   img: mgtv.png

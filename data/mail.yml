@@ -3,6 +3,7 @@
   img: dashi.png
   description: 全平台邮箱客户端
   winget: NetEase.MailMaster
+  winget_presets: [office]
 - name: Foxmail
   url: https://www.foxmail.com/
   img: foxmail.png
@@ -14,3 +15,4 @@
   img: thunderbird.png
   description: 知名开源邮箱客户端
   winget: Mozilla.Thunderbird.zh-CN
+  winget_presets: [clean]

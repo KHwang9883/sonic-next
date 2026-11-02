@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { load as yamlLoad } from 'js-yaml'
 import { marked } from 'marked'
-import type { NavItem, NavData } from './types'
+import type { NavItem, NavData, WingetPreset } from './types'
 
 const dataDir = path.join(process.cwd(), 'data')
 const IMG_BASE_URL = '/images/'
@@ -15,6 +15,26 @@ function processImgUrl(img: string | undefined): string | undefined {
 
 function processNavItemImg(item: NavItem): NavItem {
   return { ...item, img: processImgUrl(item.img)! }
+}
+
+// 允许 winget_presets 写成单个字符串或字符串数组
+function normalizePresets(value: unknown): string[] | undefined {
+  if (typeof value === 'string') {
+    const id = value.trim()
+    return id ? [id] : undefined
+  }
+  if (Array.isArray(value)) {
+    const ids = value.map((v) => String(v).trim()).filter(Boolean)
+    return ids.length ? ids : undefined
+  }
+  return undefined
+}
+
+function processNavItem(item: NavItem): NavItem {
+  return {
+    ...processNavItemImg(item),
+    winget_presets: normalizePresets((item as any).winget_presets),
+  }
 }
 
 function loadYaml(filename: string): any {
@@ -52,7 +72,7 @@ export function getNavData(): NavData {
     const key = file.replace('.yml', '')
     const items = loadYaml(file) as NavItem[]
     // Process img field to add base URL
-    categoryData[key] = items.map(processNavItemImg)
+    categoryData[key] = items.map(processNavItem)
   }
 
   // Build structured menu with data
@@ -74,6 +94,33 @@ export function getNavData(): NavData {
     }
     return item
   })
+
+  // 组装批量安装预设：显式声明的按声明顺序在前，条目上打过标签但未声明的自动追加
+  const declaredPresets: WingetPreset[] = (webstackConfig.wingetPresets ?? []).map((p: any) => ({
+    id: String(p.id),
+    name: p.name ?? String(p.id),
+    description: p.description,
+  }))
+
+  const discoveredPresetIds = new Set<string>()
+  const collectPresets = (items?: NavItem[]) => {
+    items?.forEach((item) => item.winget_presets?.forEach((id) => discoveredPresetIds.add(id)))
+  }
+  menu.forEach((item: any) => {
+    if (item.submenu) {
+      item.submenu.forEach((sub: any) => collectPresets(sub.items))
+    } else {
+      collectPresets(item.items)
+    }
+  })
+
+  const declaredIds = new Set(declaredPresets.map((p) => p.id))
+  const wingetPresets: WingetPreset[] = [
+    ...declaredPresets,
+    ...[...discoveredPresetIds]
+      .filter((id) => !declaredIds.has(id))
+      .map((id) => ({ id, name: id })),
+  ]
 
   // Build date for "最后更新"
   const buildDate = formatDate(new Date())
@@ -102,5 +149,6 @@ export function getNavData(): NavData {
     aboutPage,
     since: webstackConfig.since,
     lastUpdate: buildDate,
+    wingetPresets,
   }
 }

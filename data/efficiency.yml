@@ -3,29 +3,34 @@
   img: everything.png
   description: 文件查找利器
   winget: voidtools.Everything
+  winget_presets: [basic, clean, office, creative]
 - name: PowerToys
   foss: true
   url: https://github.com/microsoft/PowerToys/releases
   img: powertoys.png
   description: 微软出品系统增强工具
   winget: Microsoft.PowerToys
+  winget_presets: [clean]
 - name: File Converter
   foss: true
   url: https://github.com/Tichau/FileConverter
   img: converter.png
   description: 右键菜单转换媒体文件格式
   winget: AdrienAllard.FileConverter
+  winget_presets: [basic, clean, creative]
 - name: QuickLook
   foss: true
   url: https://github.com/QL-Win/QuickLook
   img: quicklook.png
   description: 按下空格键快速预览文件
   winget: QL-Win.QuickLook
+  winget_presets: [office, creative]
 - name: WizTree
   url: https://diskanalyzer.com/download
   img: wiztree.png
   description: 轻松查找大文件
   winget: AntibodySoftware.WizTree
+  winget_presets: [basic, office, creative]
 - name: 菲菲更名宝贝 之 得意非凡
   url: http://www.ffhome.com/works/1406.html
   img: feifei.png

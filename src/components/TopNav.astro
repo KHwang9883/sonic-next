@@ -1,11 +1,12 @@
 ---
 interface Props {
   showToggle?: boolean
+  showBatchInstall?: boolean
   title: string
   favicon?: string
 }
 
-const { showToggle = true, title, favicon = '/favicon.svg' } = Astro.props
+const { showToggle = true, showBatchInstall = true, title, favicon = '/favicon.svg' } = Astro.props
 ---
 
 <nav class="top-nav">
@@ -33,6 +34,19 @@ const { showToggle = true, title, favicon = '/favicon.svg' } = Astro.props
 
     <!-- Right: actions -->
     <div class="top-nav-right">
+      <!-- Batch install toggle -->
+      {showBatchInstall && (
+        <button
+          id="batch-install-toggle"
+          class="top-nav-action"
+          title="批量安装"
+          aria-label="批量安装"
+          aria-pressed="false"
+        >
+          <i class="fas fa-list-check"></i>
+        </button>
+      )}
+
       <!-- Dark mode toggle -->
       <button id="dark-mode-toggle" class="top-nav-action" title="切换主题" aria-label="切换主题">
         <i class="fas fa-moon dark-mode-icon-moon"></i>

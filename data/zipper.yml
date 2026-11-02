@@ -4,9 +4,11 @@
   img: 7zip.png
   description: 开源压缩软件
   winget: 7zip.7zip
+  winget_presets: [basic, clean, office, gaming, creative, entertainment]
 - name: 360 压缩
   pup: true
   url: https://yasuo.360.cn/
   img: 360zip.png
   description: 仅推荐给偏好国产压缩软件的用户
   winget: 360.360Zip
+  winget_presets: [china]

@@ -11,6 +11,14 @@ export interface NavItem {
   abandoned?: boolean
   pup?: boolean
   winget?: string
+  // 所属批量安装预设（对应 webstack.yml 的 wingetPresets[].id）
+  winget_presets?: string[]
+}
+
+export interface WingetPreset {
+  id: string
+  name: string
+  description?: string
 }
 
 export interface MenuSubItem {
@@ -66,4 +74,5 @@ export interface NavData {
   }
   since: number
   lastUpdate?: string
+  wingetPresets: WingetPreset[]
 }

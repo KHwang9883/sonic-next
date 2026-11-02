@@ -1,0 +1,69 @@
+---
+import type { WingetPreset } from '../data/types'
+
+interface Props {
+  presets?: WingetPreset[]
+}
+
+const { presets = [] } = Astro.props
+const defaultPreset = presets[0]?.id
+---
+
+<!-- 批量安装：底部操作栏 + 命令弹窗（默认隐藏，由 JS 控制） -->
+<div class="batch-bar" id="batch-bar" hidden>
+  {presets.length > 0 && (
+    <div class="batch-bar-presets" id="batch-presets">
+      <span class="batch-bar-presets-label">预设</span>
+      {presets.map((preset) => (
+        <button
+          type="button"
+          class:list={['batch-preset', preset.id === defaultPreset && 'active']}
+          data-preset={preset.id}
+          title={preset.description}
+        >
+          {preset.name}
+        </button>
+      ))}
+    </div>
+  )}
+  <div class="batch-bar-main">
+    <div class="batch-bar-info">
+      <i class="fas fa-list-check"></i>
+      <span>已选 <strong id="batch-count">0</strong> 个软件</span>
+      <span class="batch-bar-note">置灰条目暂不支持使用命令安装</span>
+    </div>
+    <div class="batch-bar-actions">
+      <button type="button" class="batch-btn batch-btn-ghost" id="batch-exit">退出</button>
+      <button type="button" class="batch-btn batch-btn-primary" id="batch-generate" disabled>
+        <i class="fas fa-terminal"></i>
+        生成安装命令
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="batch-overlay" id="batch-overlay" hidden>
+  <div class="batch-modal" role="dialog" aria-modal="true" aria-labelledby="batch-modal-title">
+    <button class="batch-modal-close" id="batch-modal-close" type="button" aria-label="关闭">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="batch-modal-header">
+      <i class="fas fa-terminal"></i>
+      <span id="batch-modal-title">批量安装命令</span>
+    </div>
+    <p class="batch-modal-hint">
+      共 <strong id="batch-modal-count">0</strong> 个软件。请以管理员身份在 Windows 终端中执行，或保存为批处理文件后运行。
+    </p>
+    <textarea class="batch-modal-code" id="batch-command" readonly spellcheck="false"></textarea>
+    <div class="batch-modal-actions">
+      <button type="button" class="batch-btn batch-btn-primary" id="batch-copy">
+        <i class="fas fa-copy"></i>
+        复制到终端
+      </button>
+      <button type="button" class="batch-btn batch-btn-ghost" id="batch-save">
+        <i class="fas fa-file-arrow-down"></i>
+        保存为 .bat
+      </button>
+    </div>
+  </div>
+</div>

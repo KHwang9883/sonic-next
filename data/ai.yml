@@ -3,11 +3,13 @@
   img: doubao.png
   description: 字节跳动旗下 AI 助手
   winget: ByteDance.Doubao
+  winget_presets: [basic, china, office]
 - name: WorkBuddy
   url: https://copilot.tencent.com/work/
   img: workbuddy.png
   description: 腾讯云智能体办公助手
   winget: Tencent.WorkBuddy
+  winget_presets: [china, office, creative]
 - name: DeepSeek
   url: https://chat.deepseek.com/
   img: deepseek.png
@@ -17,6 +19,7 @@
   img: trae.png
   description: 字节跳动智能体编程办公助手
   winget: ByteDance.Trae.CN
+  winget_presets: [office]
 - name: 千问
   url: https://www.qianwen.com/
   img: qwen.png
@@ -47,3 +50,4 @@
   img: cherrystudio.png
   description: 全能 AI 工作站
   winget: kangfenmao.CherryStudio
+  winget_presets: [clean]
